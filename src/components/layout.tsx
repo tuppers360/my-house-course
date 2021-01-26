@@ -8,9 +8,7 @@ interface IProps {
 }
 
 const Layout: FunctionComponent<IProps> = ({ main }) => {
-  const authenticated = false;
-
-  const logout = () => null;
+  const { logout, authenticated } = useAuth();
 
   return (
     <div className="bg-gray-900 max-w-screen-2xl mx-auto text-white">
