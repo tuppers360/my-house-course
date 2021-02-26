@@ -1,19 +1,19 @@
-import "firebase/auth";
+import 'firebase/auth';
 
-import { FunctionComponent, useEffect, useState } from "react";
+import { FunctionComponent, useEffect, useState } from 'react';
 
-import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
-import firebase from "firebase/app";
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import firebase from 'firebase/app';
 
 const firebaseAuthConfig = {
-  signInFlow: "popup",
+  signInFlow: 'popup',
   signInOptions: [
     {
       provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      requireDisplayName: false,
-    },
+      requireDisplayName: false
+    }
   ],
-  signInSuccessUrl: "/",
+  signInSuccessUrl: '/'
 };
 
 const FirebaseAuth: FunctionComponent = () => {

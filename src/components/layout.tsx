@@ -1,7 +1,7 @@
-import { FunctionComponent, ReactNode } from "react";
+import { FunctionComponent, ReactNode } from 'react';
 
-import Link from "next/link";
-import { useAuth } from "src/auth/useAuth";
+import Link from 'next/link';
+import { useAuth } from 'src/auth/useAuth';
 
 interface IProps {
   main: ReactNode;
@@ -11,9 +11,9 @@ const Layout: FunctionComponent<IProps> = ({ main }) => {
   const { logout, authenticated } = useAuth();
 
   return (
-    <div className="bg-gray-900 max-w-screen-2xl mx-auto text-white">
-      <nav className="bg-gray-800 h-16">
-        <div className="px-6 flex items-center justify-between h-16">
+    <div className="mx-auto text-white bg-gray-900 max-w-screen-2xl">
+      <nav className="h-16 bg-gray-800">
+        <div className="flex items-center justify-between h-16 px-6">
           <Link href="/">
             <a>
               <img
